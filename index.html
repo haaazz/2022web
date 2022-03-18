@@ -3,8 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <title> 해결사 하리무 </title>
+    <style>  /*스타일내에서주석다는법귀엽당*/
+        table { border : 3px solid rgb(46, 43, 168);
+        border-collapse: collapse;}
+        td { border : 1px dotted rgb(46, 43, 168); padding: 0px;}
+        img {vertical-align: bottom;}
+
+        a, a:visited {color:#352094; text-decoration: none;} /*하이퍼 링크*/
+        a:hover {color:rgb(255, 5, 5); text-decoration: none;} /*마우스 올렸을 때*/
+    </style>
 </head>
 <body>
+    <a href="https://www.duksung.ac.kr/" target="_blank" >덕성여대</a>
+    <!--here reference 여기 주석을 달겠다, 하이퍼링크/ 타겟밑줄블링크는 새창에띄우기-->
+    <a href="https://blog.naver.com/ez703" target="_blank" >내블로그</a>
+    <a href="https://github.com/haaazz" target="_blank" >내 깃허브</a>
+
     <h1>지금 당장 먹고싶은것들</h1>
     <ol type="a" start="a">
         <li>리콜라캔디 크랜베리맛</li>
@@ -22,23 +36,25 @@
         <li>휴학</li>
     </ul>
     <dl>
-        <dt>잘하는롤챔프</dt>
-        <dd>이 즈 리 얼</dd>
-        <dd>징크스</dd>
-        <dd>루시안</dd>
-        <dd>자야</dd>
+        <dt>올해 이루고 싶은 것</dt>
+        <dd>정보처리기사</dd>
+        <dd>컬러리스트</dd>
+        <dd>학점 복구</dd>
+        <dd>jpt 일문 졸업요건 이상</dd>
     </dl>
     <table border="3">
         <caption> 표 연습 </caption>
         <tr> <!--주석다는법-->
-            <td width="100" height="100" > <img src="css\images\a1.jpg" alt="이즈리얼"
-                width="100" height="100"></td>
+            <td width="100" height="100" > <a href="https://www.leagueoflegends.com/ko-kr/" target="_blank">
+                <img src="css\images\a1.jpg" alt="이즈리얼"
+                width="100"></a></td>  <!--너비/높이 한쪽만 설정해주면 자동비율유지-->
             <td width="100" height="100" >b</td>
             <td width="100" height="100" >c</td>
         </tr>
         <tr> <!--2-->
             <td width="100" height="100" >d</td>
-            <td width="100" height="100" colspan="2">e</td>
+            <td width="100" height="100" colspan="2"><img src="css\images\a1.jpg" alt="이즈리얼"
+                width="201" height="100"></td> <!--너비 200으로했을때 뜨는 이유는 선이 들어가서 그럼-->
         </tr>
         <tr> <!--3-->
             <td width="100" height="100" >g</td>
@@ -46,5 +62,29 @@
             <td width="100" height="100" >i</td>
         </tr>
     </table>
+
+    <img src="css\images\a1.jpg" alt="이즈리얼" usemap="#ezreal">
+    <map name="ezreal">
+        <area shape="rect" coords="246,167,294,207"
+        href="https://namu.wiki/w/%EC%9D%B4%EC%A6%88%EB%A6%AC%EC%96%BC" target="_blank">
+        <area shape="rect" coords="85,32,175,130"
+        href="https://lol.inven.co.kr/dataninfo/skin/#champ=15,skin=1398" target="_blank">
+    </map>
+
+    <p></p><!--오브젝트 입력 방법, 오브젝트에만 data를 씀 나머지는 src-->
+    <object data="css\file\ptest.pdf" width="400" height="500"></object>
+    <object data="css\file\bgsound.mp3"></object>
+    <object data="css\file\fire.mp4"></object>
+
+    <p></p>
+    <embed src="css\file\ptest.pdf" width="400" height="500">
+    <embed src="css\file\bgsound.mp3" width="300" height="500">
+    <embed src="css\file\fire.mp4" width="100" height="200">
+
+        <p></p><!--오디오, 재생버튼 보이게 하려면 컨트롤즈 붙여주기 반복루프-->
+        <audio src="css\file\bgsound.mp3" controls autoplay loop></audio>
+
+        <p></p><!--비디오 소리없이자동실행 뮤티드(뮤티드는 비디오만 됨)-->
+        <video src="css\file\fire.mp4" controls autoplay muted></video>
 </body>
 </html>
