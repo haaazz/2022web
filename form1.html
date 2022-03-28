@@ -1,19 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        body {margin-top:20px;
+            margin-left: 50px;
+            margin-right: 300px;}
+        fieldset {border:2px solid rgb(240, 111, 97);
+        background-color: rgb(203, 255, 255);}
+        input{border: 1px solid rgb(0, 0, 0);}
+    </style>
 </head>
+
 <body>
     <form>
     <fieldset>
-    <legend>프로필</legend>
-    <label>이름<input type="text" placeholder="한글 입력" maxlenght="10"></label>
-    <label for="pa">비밀번호</label>
-    <input type="password" id="pa" autofocus maxlength="12" size="70">
+    <legend>프로필</legend>    <!--레전드 뜻은 '범례'-->
+    <label>이름<input type="text" placeholder="한글로입력하세요" maxlenght="10" size="40"><label><br><br>
+    <!--라벨은 설명을 해주는거라 전송버튼같은 직관적인것에는 필요x-->
+    <label for="pw">비밀번호</label>
+    <input type="password" id="pw" autofocus maxlength="12" size="70"><br><br>
+    <label>검색<input type="search"></label><br><br>
+    <label>이메일<input type="email"></label><br><br>
+    <label>전화번호<input type="tel"></label><br><br>
+    <label>URL<input type="url"></label><br><br>
+    <h4>학년 : </h4>
+    <label>1학년<input type="radio" name="grd" value="g_1"></label>
+    <label>2학년<input type="radio" name="grd" value="g_2"></label>
+    <label>3학년<input type="radio" name="grd" value="g_3"checked></label>
+    <label>4학년<input type="radio" name="grd" value="g_4"></label>
+    <label>추가학기~대학원생<input type="radio" name="grd" value="g_5"></label><br><br>
+    <!--다 똑같은 name으로 같은 그룹으로 묶어줘야 다중선택 방지 가능-->
+    <!--value값은 다 다르게 줘야 뭘 선택했는지 선택에 대한 차등 값 부여 가능->서버로 값 전달-->
+
+    선택과목 : 
+    <label>파이썬<input type="checkbox" value="s_1"></label>
+    <label>영분제<input type="checkbox" value="s_2"></label>
+    <label>웹콘제<input type="checkbox" value="s_3" checked></label>
+    <label>프개론<input type="checkbox" value="s_4"></label><br><br>
+    <!--체크박스는 name 설정을 해도 다중선택 가능해서 굳이 name 부여할 필요x value는 필요함-->
+
+    <label>점수<input type="number" min="0" max="100" step="5" value="50"></label><br><br>
+    <label>출결점수<input type="range" min="0" max="10" step="1" value="5"></label><br><br>
+
+    <input type="date">
+    <input type="month">
+    <input type="week"><br><br>
+
+    <input type="time">
+    <input type="datetime"> <!--잘 실행 안됨-->
+    <input type="datetime-local"><br><br>
+
+
     </fieldset>
     </form>
 </body>
+
 </html>

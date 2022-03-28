@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {margin-top:20px;
+            margin-left: 50px;
+            margin-right: 300px;}
+        fieldset {border:2px solid rgb(132, 0, 255);
+        background-color: rgb(238, 223, 230);}
+        input{border: 1px solid rgb(0, 0, 0);}
+    </style>
+</head>
+
+<body>
+    <form method="get" action="aaa.html">
+    <fieldset>
+    <legend>PROFILE</legend>
+    <ul>
+
+    <li>
+        <label>이름<input type="text"  autofocus placeholder="한글로입력하세요" maxlenght="10" size="40" name="na1" required><label><br><br>
+    </li>
+
+    <li>
+        <label for="pw">비밀번호</label>
+        <input type="password" name="pw1" id="pw" maxlength="12" size="70"><br><br>
+    </li>
+
+    <li>    
+        <label>이메일<input type="email" name="ema" value="aaa@.naver.com" readonly></label><br><br>
+    </li>
+
+    <li>
+        혈액형 : 
+        <label>a<input type="radio" name="blood" value="bta"></label>
+        <label>b<input type="radio" name="blood" value="btb"></label>
+        <label>o<input type="radio" name="blood" value="bto"></label>
+        <label>ab<input type="radio" name="blood" value="btab"></label><br><br>
+    </li>
+    </ul>
+    <input type="submit" value="전송">
+    <input type="reset" value="일괄삭제">
+    <input type="image" src="css\images\a1.jpg" width="50" height="20"><br><br>
+    <!-- x=10&y=12는 이미지를 누르는 순간의 좌표 -->
+    <input type="button" value="공지사항" onclick="window.open('https://namu.wiki/w/%EC%9D%B4%EC%A6%88%EB%A6%AC%EC%96%BC')">
+    <!-- 그냥 버튼만 만들면 아무런 기능이 x, js로 기능을 부여해주어야함 -->
+    <input type="file">
+    <input type="hidden" value="가보자고!" name="hd1">
+    <!-- 화면에는 안뜨고 전송시 주소창에 뜸 -->
+    </fieldset>
+    </form>
+</body>
+
+</html>
