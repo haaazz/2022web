@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    .box1 {border:1px solid crimson; width: 400px; height: 150px; 
+        /*display: flex; align-items: center; justify-content: center;*/
+        text-align: center; line-height: 1.3em; display: flex; align-items: center; justify-content: center;
+        /*line-height를 content box의 height랑 똑같이하면 맨 첫줄만 예쁘게 정렬됨, 여러줄일때는 text-align 필수*/}
+    .c1 {font-size: 4em;
+        font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+        color: rgba(35, 163, 223, 0.671);
+        text-transform: uppercase;
+        letter-spacing: 0.3em;}
+    .shad1 {text-shadow: 5px 5px 5px rgb(48, 54, 141); -webkit-text-stroke: 1px white;} /* 좌우 상하 번짐의정도 그림자의색;*/
+    </style>
+</head>
+<body>
+    <div style="font-family: Georgia, 'Times New Roman', Times, serif; font-size: 1em;">테스트1 test</div>
+    <div style="font-family: Georgia, 'Times New Roman', Times, serif; font-style: italic;">테스트1 test</div>
+    <div style="font-family: Georgia, 'Times New Roman', Times, serif; font-size: 2em; font-weight: 700;">테스트1 test</div>
+    <div class=box1 style="font-family: Georgia, 'Times New Roman', Times, serif; font-size: 2em;
+                color: rgba(20, 97, 184, 0.226);">이즈리얼은전설이다</div>
+    <div style="font-style: italic; text-decoration: line-through">테스트4</div>
+    <div class="c1 shad1"> web design </div>
+</body>
+</html>

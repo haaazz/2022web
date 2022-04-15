@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="css_test.css"> <!--외부스타일-->
+
+    <style> /*내부스타일*/
+    * {margin:0;}
+        h1{color: cadetblue;}
+    #layout1{color:tomato; font-size: 25px; border: 1px solid coral; width: 200px; height: 70px;
+            display: flex; align-items: center; justify-content: center;
+            position:absolute; left:50%; top: 50%; transform: translate(-50%, -50%);}
+    .c1 {color:aquamarine !important} /* 3. important는 후순위에 밀린 스타일이어도 제일 중요하게 취급함, 이게 적용됨 */
+    .c2 {background-color: antiquewhite;} /* 1. c1 c2 전부 다 color로 지정하면 c2쪽, 더 가까운쪽이 우선순위가 되어 적용됨*/
+    .c1 {color:royalblue} /* 2. 마찬가지로 이 경우에도 밑의 c1이 적용됨*/
+
+    div > p {color: chocolate; font-size: 60px;} /* div 밑의 p는 이렇게 적용하겠다 , > b로 하면 후손이라 설정이 안됨*/
+    </style>
+
+</head>
+<body>
+    <img src="css\images\a1.jpg" width="300">
+    <h1 style="color: rgb(247, 164, 215);">덕성여대1</h1> <!--인라인스타일/ 우선순위는 인라인>내부>외부-->
+    <div id="layout1">덕성여대2</div>
+    <h2 class="c1 c2">덕성여대3</h2>
+    <h3>덕성여대4</h3>
+    <span style="color:hotpink" class="c1">덕성여대5</span> <br><br>
+    <div><p><b>덕성여대6</b></p></div>
+</body>
+</html>

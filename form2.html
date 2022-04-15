@@ -80,11 +80,15 @@
 
     <button type="button">공지사항</button>
     <button type="reset">취소</button>
-    <button type="submit">제출하기</button>
+    <button type="submit">제출하기</button><br><br>
     <!--위의 input button이랑 역할은 같지만 낭독기에서 버튼으로 읽혀 시각장애인분들께 더 도움됨-->
 
+   <input type="range" min="19" max="90" oninput="document.getElementById('range1').innerHTML=this.value;">
+    <!--oninput="alert('경고내용')" 하면 움직이려할때 팝업경고가 나옴, oninput="alert(this.value)";으로하면 그순간순간값이 나옴-->
+    <div style="margin-left: 20px; color: rgb(129, 202, 224);" id="range1">값</div>
+    <!--div는 둥둥 떠있다..?는 느낌-->
     </fieldset>
     </form>
-</body>
 
+</body>
 </html>

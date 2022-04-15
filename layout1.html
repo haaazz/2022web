@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        header {width: 1200px; height: 120px; background: rgb(65, 65, 164);}
+        #aside1 {width: 300px; height: 600px; background: rgb(59, 153, 104); float: left;} /* 왼쪽부터 끼워넣는다는 의미 */
+        main {width: 700px; height: 600px; background: rgb(65, 131, 164); float: left;}
+        #aside2 {width: 200px; height: 600px; background: rgb(128, 59, 153); float: left;}
+        footer {width: 1200px; height: 100px; background: rgb(72, 164, 65); clear: left;}
+        /* 위에서부터 플로트 적용해서 푸터가 자기 자리 못잡는 상태라 clear로 더는 적용 안하겠다고 선언해줘야함*/
+        /* right로 해보니 오른쪽부터 채워지고 aside가 오른쪽으로 감, 왼쪽에 화면-1200px만큼의 여백이 남음 순서대로 붙으므로 순서가 매우매우 중요*/
+        /* 화면 크기별로 달라지게 하고싶으면 컨테이너만 큰 값을 잡아준 후에 하위 요소들은 100%로 맞춰주면 화면따라 움직이는 어쩌구*/
+    </style>
+</head>
+<body>
+    <header>
+        상단
+    </header>
+    <aside id="aside1">
+        카테고리
+    </aside>
+    <main>
+        메인
+    </main>
+    <aside id="aside2">
+        위젯
+    </aside>
+    <footer>
+        댓글창
+    </footer>
+</body>
+</html>
